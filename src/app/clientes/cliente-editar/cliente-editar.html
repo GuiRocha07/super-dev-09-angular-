@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>Editar Cliente</h1>
+
+    <div>
+        <label>Nome</label>
+        <input
+            type="text"
+            [ngModel]="cliente().nome"
+            (ngModelChange)="cliente().nome = $event">
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input
+            type="email"
+            [ngModel]="cliente().email"
+            (ngModelChange)="cliente().email = $event">
+    </div>
+
+    <div>
+        <label>Telefone</label>
+        <input
+            type="text"
+            [ngModel]="cliente().telefone"
+            (ngModelChange)="cliente().telefone = $event">
+    </div>
+
+    <button (click)="salvar()">
+        Salvar Alterações
+    </button>
+
+    <a routerLink="/clientes">
+        Voltar
+    </a>
+</div>

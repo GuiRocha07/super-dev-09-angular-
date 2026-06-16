@@ -1,16 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
-import { BoasVindas } from './boas-vindas/boas-vindas';
-import { CidadeBlumenau } from './cidade-blumenau/cidade-blumenau';
-import { CidadeIndaial } from './cidade-indaial/cidade-indaial';
-import { CarroClassico } from './carros/carro-classico/carro-classico';
-import { CarroEsportivo } from './carros/carro-esportivo/carro-esportivo';
-import { CarroSuv } from './carros/carro-suv/carro-suv';
 import { Navbar } from './navbar/navbar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, BoasVindas, CidadeBlumenau, CidadeIndaial,CarroClassico, CarroEsportivo, CarroSuv, Navbar],
+  imports: [RouterOutlet, RouterLink, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

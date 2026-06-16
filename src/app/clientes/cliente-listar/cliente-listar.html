@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>Clientes</h1>
+
+    <div class="topo">
+        <a routerLink="/clientes/cadastrar">
+            Cadastrar Cliente
+        </a>
+        <span>Qtd clientes: {{clientes().length}}</span>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @for(cliente of clientes(); track cliente.id){
+                <tr>
+                    <td>{{cliente.nome}}</td>
+                    <td>{{cliente.email}}</td>
+                    <td>{{cliente.telefone}}</td>
+                    <td>
+                        <a routerLink="/clientes/editar/{{cliente.id}}">
+                            Editar
+                        </a>
+                        <button (click)="apagar(cliente.id)">
+                            Apagar
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

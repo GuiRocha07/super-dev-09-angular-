@@ -1,0 +1,17 @@
+<p>dados-pessoais works!</p>
+<div id="formulario-dados-pessoais">
+
+    <label for="nome">Nome</label>
+    <input id="nome" [(ngModel)]="nome" type="text">
+
+    <label for="sobrenome">Sobrenome</label>
+    <input id="sobrenome" [(ngModel)]="sobrenome" type="text">
+
+    <label for="idade">Idade</label>
+    <input id="idade" [(ngModel)]="idade" type="number">
+
+    <button (click)="apresentarDados()">
+        Apresentar Dados
+    </button>
+
+</div>
